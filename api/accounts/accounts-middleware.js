@@ -1,21 +1,5 @@
 const { OPEN_READWRITE } = require("sqlite3");
-const yup = require("yup");
 const { getById, getAll } = require("./accounts-model");
-
-// const accountSchema = yup.object({
-//   name: yup
-//     .string()
-//     .trim()
-//     .min(3, "name of account must be between 3 and 100")
-//     .max(100, "name of account must be between 3 and 100")
-//     .required("name and budget are required"),
-//   budget: yup
-//     .number("budget of account must be a number")
-//     .positive("budget of account is too large or too small")
-//     .integer()
-//     .max(1000000, "budget of account is too large or too small")
-//     .required("name and budget are required"),
-// });
 
 exports.checkAccountPayload = (req, res, next) => {
   // DO YOUR MAGIC
